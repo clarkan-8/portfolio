@@ -1,20 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Assets/CSS/style.css">
+    <link rel="stylesheet" href="/Assets/CSS/style.css">
     <link rel="shortcut icon" href="/Assets/ICON/Vega.ico" type="image/x-icon">
 
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Akt:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Blog - Robotica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akt:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Devicon: iconos de tecnologías -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <title>Blog - Robótica</title>
 </head>
 <body>
-<div id="header"></div>
+    <div id="header"></div>
 
-<div id="footer"></div>
-<script src="../Assets/JS/script.js"></script>
+    <!-- HERO de la página -->
+ <header class="pro-hero">
+    <video class="pro-hero__media" autoplay loop muted playsinline
+           src="/Assets/images/robotica_images/Robot_moving.mp4"></video>
+
+    <div class="pro-hero__overlay">
+        <h1 class="pro-hero__title">Docente de Robótica</h1>
+        <p class="pro-hero__subtitle">Despertando la curiosidad por la tecnología a través del armado y la programación</p>
+    </div>
+</header>
+
+    <main id="pro_art">
+
+        <!-- Introducción -->
+        <section class="pro-intro">
+            <p class="texto-par">
+                Mi experiencia en el campo de la robótica educativa ha sido una de las más
+                gratificantes, ya que combina el pensamiento lógico de la programación con
+                la construcción física de máquinas que cobran vida. Trabajar con estudiantes
+                en este ámbito les permite ver, de forma tangible, cómo sus ideas se transforman
+                en proyectos reales que se mueven, sienten y responden a su entorno.
+            </p>
+            <p class="texto-par">
+                A lo largo de este recorrido he trabajado con distintas plataformas de robótica,
+                cada una con sus propias fortalezas y enfocadas a diferentes niveles y objetivos
+                de aprendizaje.
+            </p>
+        </section>
+
+        <!-- Tarjetas por plataforma -->
+        <h2 class="section-title">Plataformas con las que trabajé</h2>
+        <section class="tech-grid">
+
+            <article class="tech-card">
+                <img class="tech-card__img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fplay-lh.googleusercontent.com%2F0ZVVegD2UTczthb8v5tu19TXiJURZpBqUPUPAUrjvEUDFvbcWDJk_dnCxUwJMb1cMz05&f=1&nofb=1&ipt=a975247dfbce150ca35c5af038fa562061b89363ea04efa653ad98fcd90c8138" alt="">
+                <h3 class="tech-card__name">LEGO Spike</h3>
+                <p class="tech-card__desc">
+                    Plataforma ideal para iniciar en la robótica. Combina construcción modular
+                    con programación por bloques, perfecta para que los estudiantes comprendan
+                    los fundamentos de sensores, motores y lógica de control.
+                </p>
+            </article>
+
+            <article class="tech-card">
+                <i class="devicon-arduino-plain colored tech-card__icon"></i>
+                <h3 class="tech-card__name">Arduino</h3>
+                <p class="tech-card__desc">
+                    Introducción al mundo de la electrónica y los microcontroladores. Los
+                    estudiantes aprenden a conectar circuitos, leer sensores y programar
+                    comportamientos, dando el salto hacia proyectos más técnicos.
+                </p>
+            </article>
+
+            <article class="tech-card">
+                <span class="tech-card__icon tech-card__icon--emoji">⚙️</span>
+                <h3 class="tech-card__name">VEX</h3>
+                <p class="tech-card__desc">
+                    Sistema robusto orientado a la competencia y a proyectos avanzados. Permite
+                    construir robots más complejos y trabajar conceptos de mecánica, estrategia
+                    y trabajo en equipo en un entorno desafiante.
+                </p>
+            </article>
+
+            <article class="tech-card">
+                <i class="devicon-python-plain colored tech-card__icon"></i>
+                <h3 class="tech-card__name">Python</h3>
+                <p class="tech-card__desc">
+                    El puente entre la programación y la robótica. Con Python los estudiantes
+                    controlan sus robots mediante código real, automatizan tareas y dan vida a
+                    una lógica más potente y flexible.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- Metodología -->
+        <section class="pro-block">
+            <h2 class="section-title">Enfoque de enseñanza</h2>
+            <p class="texto-par">
+                La robótica tiene la enorme ventaja de ser <strong>práctica y visual</strong>,
+                lo que la convierte en una herramienta poderosa para motivar el aprendizaje.
+                Mi metodología parte siempre de retos concretos: un robot que debe seguir una
+                línea, esquivar obstáculos o cumplir una misión específica. De esta manera, los
+                estudiantes aprenden a través de la experimentación, el ensayo y el error.
+            </p>
+            <p class="texto-par">
+                Con los más pequeños se prioriza el <strong>armado y la programación por bloques</strong>,
+                fortaleciendo la motricidad y el pensamiento secuencial. Con los jóvenes adultos
+                se avanza hacia la <strong>electrónica con Arduino y la programación en Python</strong>,
+                acercándolos a escenarios reales de la ingeniería y la automatización.
+            </p>
+            <p class="texto-par">
+                Más allá de lo técnico, la robótica desarrolla competencias como la
+                <strong>resolución de problemas</strong>, la <strong>creatividad</strong>, la
+                perseverancia y el <strong>trabajo colaborativo</strong>, habilidades
+                fundamentales para el mundo actual.
+            </p>
+        </section>
+
+        <!-- Cierre -->
+        <section class="pro-conclusion">
+            <p class="texto-par">
+                En conclusión, enseñar robótica con plataformas como LEGO Spike, Arduino, VEX y
+                Python me ha permitido formar estudiantes capaces de pensar, crear y construir.
+                Ver cómo un grupo de jóvenes logra que su propio robot funcione es una de las
+                experiencias más enriquecedoras de mi labor docente, y reafirma el enorme
+                potencial de la tecnología como herramienta educativa.
+            </p>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+    <script src="/Assets/JS/script.js"></script>
 </body>
 </html>

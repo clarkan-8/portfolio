@@ -43,6 +43,11 @@ body{
     top: 0;
     z-index: 10;
 }
+.menu{
+    width: 100%;
+    justify-content: space-around;
+    height: 100%;
+}
 nav{
     display: flex;
     z-index: 10;
@@ -534,6 +539,15 @@ height: 10px;
     line-height: 1.6;
     margin: 0;
 }
+/* Imagen dentro de una tarjeta */
+.tech-card__img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    display: block;
+}
 
 /* --- Bloques de texto --- */
 .pro-intro,
@@ -563,13 +577,233 @@ height: 10px;
         font-size: 1.5rem;
     }
 }
-.videodiv{
+.videopro{
+    border-radius: 30px;
+    position: relative;
     width: 100%;
     height: 300px;
+    overflow: hidden;
 }
 
-.videodiv > video{
+.videopro video{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0),
+        rgba(0,0,0,0)
+    );
+
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.overlay h2{
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 5px;
+    transform: translateY(30px);
+    transition: all 0.5s ease;
+}
+
+/* Hover */
+
+.videopro:hover .overlay{
+    opacity: 1;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,0.1)
+    );
+}
+
+.videopro:hover .overlay h2{
+    transform: translateY(0);
+}
+.tech-card__icon--emoji {
+    font-size: 3.2rem;
+    line-height: 1;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+ 
+/* (Opcional) id del hero de robótica, hereda el mismo estilo
+   que #groupimapro. Si usas la clase .pro-hero img bastaría,
+   pero por claridad: */
+.pro-hero #grouprobo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.45);
+}
+/* Fondo del hero: sirve para imagen Y video */
+.pro-hero__media,
+.pro-hero #groupimapro,
+.pro-hero #grouprobo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.45);
+}   
+/* ============================================
+   NUEVO HERO DE PRESENTACIÓN  (agregar a style.css)
+   ============================================ */
+
+.intro-hero {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Fondo difuminado y oscurecido */
+.intro-hero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(8px) brightness(0.4);
+    transform: scale(1.1); /* evita bordes blancos por el blur */
+}
+
+/* Capa de color encima para integrar con tu azul */
+.intro-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(17, 17, 125, 0.55), rgba(9, 10, 40, 0.85));
+    z-index: 1;
+}
+
+.intro-hero__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    max-width: 640px;
+}
+
+/* Avatar circular */
+.intro-hero__avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto 24px;
+    overflow: hidden;
+    border: 3px solid rgba(255, 174, 87, 0.7);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.intro-hero__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Etiqueta superior */
+.intro-hero__tag {
+    font-family: "Roboto", sans-serif;
+    color: #ffae57;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+}
+
+/* Título principal */
+.intro-hero__title {
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 18px;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Subtítulo */
+.intro-hero__subtitle {
+    font-family: "Roboto", sans-serif;
+    color: #d2d4ef;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.6;
+    margin: 0 0 32px;
+}
+
+/* Botones */
+.intro-hero__actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    font-family: "Akt", sans-serif;
+    background: linear-gradient(90deg, #f7b500, #ff7a15);
+    color: #2a1500;
+    font-weight: bold;
+    padding: 14px 28px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(255, 122, 21, 0.4);
+}
+
+.btn-secondary {
+    font-family: "Akt", sans-serif;
+    background: transparent;
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    padding: 14px 28px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #ffae57;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .intro-hero {
+        min-height: 85vh;
+    }
+    .intro-hero__avatar {
+        width: 100px;
+        height: 100px;
+    }
+    .intro-hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+h3{
+    margin: auto;
 }
