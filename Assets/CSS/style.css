@@ -5,6 +5,7 @@ a{
     text-decoration: none;
 }
 body{
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -807,3 +808,60 @@ height: 10px;
 h3{
     margin: auto;
 }
+
+.container-contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.background-contacto{
+    display: flex;
+    border-radius: 30px;
+    justify-content: center;
+    padding: 50px;
+    background-color: #24308b;
+    flex-direction: column;
+    width: 90%;
+    gap: 2rem;
+    max-width: 500px;
+}
+input{
+    padding:3px;
+    background-color: #4251be;
+    border-radius: 30px;
+}
+textarea{
+        background-color: #4251be;
+        color: rgb(191, 194, 215);
+}
+input::placeholder, textarea::placeholder{
+    color: rgb(185, 171, 171);
+}
+label{
+    font-family: "Akt", sans-serif;
+    color: #d7d9f5;
+}
+#sendboton{
+    padding: 10px;
+    color: #c9d1d9;
+    font-family: "Akt", sans-serif;
+    border-radius: 30px;
+    background-color: rgb(68, 31, 255);
+    align-self: center;
+}
+#sendboton:hover{
+    color: #bac1c9;
+    background-color: #151e62;
+    cursor: pointer;
+}
+section{
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+
+}
+section>img{
+    width: 30%;
+    height:30%;}
